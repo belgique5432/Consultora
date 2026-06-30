@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    :root {
+        --bg-footer: #1a1a1a;
+        --text-main: #ffffff;
+        --text-muted: #a0a0a0;
+        --accent: #3498db;
+        --main: #003580;
+        --background-color: #eeeff1;
+
+        --h1-size: 36px;
+        --h2-size: 24px;
+        --h3-size: 20px;
+        --h4-size: 16px;
+        --h5-size: 14px;
+    }
+
+    body {
+        background-color: var(--background-color);
+    }
+
+    .inicio  {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 100px;
+    }
+
+    .inicio h2 {
+        font-size: var(--h1-size);
+        color: #003580;
+    }
+
+    .inicio section {
+        display: flex;
+        gap: 20px;
+    }
+
+    .inicio section img {
+        max-height: 400px;
+        height: fit-content;
+        min-height: 300px;
+        width: fit-content;
+        border-radius: 20px;
+    }
+
+    .inicio section div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        width: fit-content;
+    }
+
+    .inicio section div h3 {
+        font-size: var(--h2-size);
+    }
+
+    .medio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        padding: 10px 100px;
+    }
+
+    .medio .galeria {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .medio .galeria img {
+        width: 300px;
+        height: 200px;
+    }
+
+    .medio .galeria .abajo,
+    .medio .galeria .arriva {
+        display: flex;
+        gap: 5px;
+    }
+
+    .medio .galeria .arriva .izquierda {
+        border-radius: 20px 0 0 0;
+    }
+
+    .medio .galeria .arriva .derecha {
+        border-radius: 0 20px 0 0;
+    }
+
+    .medio .galeria .abajo .izquierda {
+        border-radius: 0 0 0 20px;
+    }
+
+    .medio .galeria .abajo .derecha {
+        border-radius: 0 0 20px 0;
+    }
+
+    .medio .texto {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+
+        max-width: 650px;
+        width: fit-content;
+    }
+
+    .medio .texto h3 {
+        font-size: var(--h2-size);
+    }
+
+    .medio .texto p {
+        font-size: var(--h4-size);
+    }
+
+    .final {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 30px 100px;
+    }
+
+    .final div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border-radius: 20px;
+        gap: 10px;
+        padding: 10px;
+
+        background-color: white;
+    }
+    
+
+    .final div img {
+        max-width: 300px;
+        max-height: 300px;
+        
+        
+        align-self: center;
+        object-fit: cover;
+    }
+
+    .matipfp {
+        clip-path: circle(50%);
+    }
+
+    .ezepfp {
+        clip-path: circle(48%);
+    }
+
+    /* --> Media <-- */
+    @media (max-width: 1023px) {
+        .inicio {
+            padding: 50px 50px;
+        }
+
+        .medio {
+            padding: 20px 50px;
+        }
+
+        .medio .galeria img {
+            width: 250px;
+            height: 150px;
+        }
+
+        .final {
+            padding: 20px 50px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .inicio {
+            padding: 10px 10px;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .inicio section {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .medio {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            padding: 20px 10px;
+        }
+
+        .medio .galeria img {
+            width: 200px;
+            height: 100px;
+        }
+
+        .final {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        
+            padding: 20px 10px;
+        }
+    }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <nav class="main-navbar">
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./nosotros.html" class="activo">Nosotros</a></li>
+            <li><a href="./servicios.html">Servicios</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <main>
+        <header class="inicio">
+            <h2>Nuestra filosofía</h2>
+            <section>
+                <div>
+                    <h3>El éxito compartido</h3>
+                    <p>
+                        En MiMarca, entendemos que nuestro crecimiento es un reflejo directo del éxito de quienes confían en nosotros. <br>
+                        Bajo la premisa: "Creemos que nos va bien si a nuestros clientes les va bien", <br>
+                        construimos relaciones a largo plazo basadas en resultados tangibles. <br>
+                        Nuestra cultura corporativa prioriza la escucha activa y la personalización de cada estrategia para asegurar un impacto positivo en su entorno de negocio.
+                    </p>
+                </div>
+
+                <img src="images/nosotros/Business.jpg" alt="Profesional de negocios en un entorno corporativo" class="business-img">
+            </section>
+        </header>
+
+        <article class="medio">
+            <div class="galeria">
+                <div class="arriva">
+                    <img src="images/nosotros/confference.jpg" alt="Sala de conferencias empresariales" class="izquierda">
+                    <img src="images/nosotros/Business.jpg" alt="Equipo de trabajo en reunión de negocios" class="derecha">
+                </div>
+                <div class="abajo">
+                    <img src="images/nosotros/setup.png" alt="Configuración de estación de trabajo tecnológica" class="izquierda">
+                    <img src="images/nosotros/complement.avif" alt="Equipo colaborando en oficina moderna" class="derecha">
+                </div>
+            </div>
+
+            <div class="texto">
+                <h3>Infraestructura de clase mundial</h3>
+                <p>Contamos con espacios diseñados para fomentar la innovación y la toma de decisiones estratégicas. <br>
+                    Nuestras herramientas tecnológicas de última generación nos permiten analizar datos en tiempo real para ofrecer la máxima precisión en cada consultoría.</p>
+            </div>
+        </article>
+
+        <footer class="final">
+            <div>
+                <h3>CEO</h3>
+                <a href="https://belgique5432.github.io/esenini-uade/" target="_blank"><img class="ezepfp" src="./images/nosotros/eze.jpg" alt="Fotografía del CEO de la empresa"></a>
+                <p>Senini Ezequiel</p>
+            </div>
+                    
+            <div>
+                <h3>Jefe de Diseño y Desarrollo</h3>
+                <a href="https://mknaus-uade.github.io/Proyecto1Viernes/" target="_blank"><img class="matipfp" src="./images/nosotros/mati.jpeg" alt="Fotografía del jefe de diseño de la empresa"></a>
+                <p>Matias Knaus</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <header class="footer-container">
+            <div class="footer-section">
+                <h2 class="footer-logo">MiMarca</h2>
+                <p>Creando experiencias digitales únicas desde 2024.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Explorar</h3>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </header>
+  
+        <section class="footer-bottom">
+            <p>&copy; 2026 MiMarca. Todos los derechos reservados.</p>
+        </section>
+    </footer>
+</body>
+</html>

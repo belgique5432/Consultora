@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    :root {
+        --bg-footer: #1a1a1a;
+        --text-main: #ffffff;
+        --text-muted: #a0a0a0;
+        --accent: #3498db;
+        --main: #003580;
+        --background-color: #eeeff1;
+
+        --h1-size: 36px;
+        --h2-size: 24px;
+        --h3-size: 20px;
+        --h4-size: 16px;
+        --h5-size: 14px;
+    }
+
+    body {
+        background-color: var(--background-color);
+    }
+
+    .inicio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 50px 100px;
+
+        background-image: linear-gradient(rgba(0, 102, 204, 0.5), rgba(0, 102, 204, 0.5)), url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FsYSUyMGRlJTIwcmV1bmlvbmVzfGVufDB8fDB8fHww');
+        background-size: cover;
+        background-position: center;
+
+        color: white;
+    } 
+
+    .inicio span {
+        font-size: var(--h3-size);
+    }
+
+    .inicio h1 {
+        font-size: var(--h1-size);
+    }
+
+    .inicio p {
+        font-size: var(--h4-size);
+    }
+
+    .inicio section {
+        display: flex;
+        align-items: space-between;
+        text-align: start;
+        gap: 20px;
+        
+        height: fit-content;
+        padding: 10px;
+        padding-left: 20px;
+
+        background-color: white;
+        border-radius: 20px;
+        color: darkblue;
+    }
+
+    .inicio section div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        max-width: 300px;
+        gap: 20px;
+    }
+
+    .medio {
+        display: flex;
+        flex-direction: column;
+
+        padding: 20px 100px;
+    }
+
+    .medio header {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .medio header h2 {
+        color: #003580;
+    }
+
+    .medio header p {
+        font-size: var(--h4-size);
+    }
+
+    .medio section {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .medio section div {
+        position: relative; 
+        width: 250px;       
+        height: 350px;      
+        overflow: hidden;   
+    }
+
+    .medio section div img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+
+    .medio section p {
+        position: absolute;
+        bottom: 0;          
+        left: 27px;
+        width: 80%;        
+        margin: 0;         
+        padding: 15px;      
+        background-color: rgba(255, 255, 255, 0.9); 
+        color: #333;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .final {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        padding: 20px 100px;
+        padding-bottom: 50px;
+    }
+
+    .final h2 {
+        font-size: var(--h2-size);
+        text-align: center;
+    }
+
+    .final section {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .final section div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .final section div img {
+        width: 50px;
+    }
+
+    /* --> Media <-- */
+    @media (max-width: 1023px) {
+        .inicio {
+            padding: 50px 50px;
+        }
+
+        .medio {
+            padding: 20px 50px;
+        }
+
+        .final {
+            padding: 20px 50px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .inicio {
+            padding: 50px 10px;
+        }
+
+        .inicio section {
+            flex-direction: column;
+        }
+
+        .medio {
+            padding: 20px 10px;
+        }
+
+        .medio header {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .medio section {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(250px, 20px));
+            align-items: center;
+        }
+
+        .final {
+            padding: 20px 10px;
+        }
+
+        .final section {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(250px, 20px));
+            align-items: center;
+            gap: 10px;
+        }
+    }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <nav class="main-navbar">
+        <ul>
+            <li><a href="./index.html" class="activo">Inicio</a></li>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+            <li><a href="./servicios.html">Servicios</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <main>
+        <header class="inicio">
+            <span>Lo mejor para tu empresa</span>
+            <h1>Experiencia y servicios en los que podes confiar</h1>
+            <p>
+                Brindamos soluciones integrales y personalizadas para impulsar el crecimiento de su organización. <br>
+                Nuestro equipo de expertos está dedicado a optimizar sus procesos, <br>
+                mitigar riesgos y maximizar sus resultados en un mercado cada vez más competitivo.
+            </p>
+
+            <section>
+                <div>
+                    <img src="images/iconos/newspaper 1.svg" alt="Ícono de periódico para planificación de negocios">
+                    <p>Planificacion y ejecucion de estrategias de negocio</p>
+                </div>
+
+                <div>
+                    <img src="images/iconos/chart-candlestick 1.svg" alt="Ícono de gráfico financiero">
+                    <p>Analisis y planificacion de proyectos financieros</p>
+                </div>
+
+                <div >
+                    <img src="images/iconos/earth 1.svg" alt="Ícono de oportunidades internacionales">
+                    <p>Oportunidades de negocio internacionales</p></div>
+
+                </div>
+            </section>
+        </header>
+
+        <article class="medio">
+            <header>
+                <h2>
+                    Creemos que va a ir bien <br>
+                    si a nuestros clientes les va bien
+                </h2>
+                <p>
+                    Nuestra filosofía se fundamenta en construir alianzas sólidas y a largo plazo. <br>
+                    Entendemos que nuestro crecimiento es una consecuencia directa del éxito que <br>
+                    logramos para usted, por eso nos involucramos en cada proyecto con el mismo <br>
+                    compromiso y dedicación que si fuera el nuestro.
+                </p>
+            </header>
+
+            <section>
+                <div>
+                    <img src="images/index/innovación.svg" alt="Gráfico de crecimiento y espacio de innovación" >
+                    <p class="card-text">Espacios de innovación.</p>
+                </div>
+                <div>
+                    <img src="images/index/estrategias.svg" alt="Equipo colaborando en estrategias conjuntas">
+                    <p class="card-text">Estrategias conjuntas.</p>
+                </div>
+                <div>
+                    <img src="images/index/analisis.svg" alt="Análisis de datos en tiempo real" >
+                    <p class="card-text">Análisis en tiempo real.</p>
+                </div>
+                <div>
+                    <img src="images/index/alianzas.svg" alt="Persona estableciendo alianzas duraderas">
+                    <p class="card-text">Alianzas duraderas.</p>
+                </div>
+            </section>
+        </article>
+        
+        <footer class="final">
+            <h2>Razones para trabajar con nostros</h2>
+            <section>
+                <div>
+                    <img src="images/iconos/users-round 1.svg" alt="Icono de atención personalizada">
+                    <p><b>Atención Personalizada</b></p>
+                    <p>Un equipo de profesionales dedicados a entender y resolver sus necesidades específicas</p>
+                </div>
+
+                <div>
+                    <img src="images/iconos/lightbulb 1.svg" alt="Icono de idea innovadora">
+                    <p><b>Visión Innovadora</b></p>
+                    <p>Implementamos metodologías ágiles y soluciones creativas para los desafíos modernos.</p>
+                </div>
+
+                <div>
+                    <img src="images/iconos/workflow 1.svg" alt="Icono de flujo de trabajo colaborativo">
+                    <p><b>Sinergia Operativa</b></p>
+                    <p>Nos integramos de manera transparente con la cultura y los procesos de su empresa.</p>
+                </div>
+
+                <div>
+                    <img src="images/iconos/chart-network 1.svg" alt="Icono de resultados medibles">
+                    <p><b>Resultados Medibles</b></p>
+                    <p>Basamos nuestras decisiones en datos concretos para garantizar un crecimiento real.</p>
+                </div>
+            </section>
+        </footer>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <header class="footer-container">
+            <div class="footer-section">
+                <h2 class="footer-logo">MiMarca</h2>
+                <p>Creando experiencias digitales únicas desde 2024.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Explorar</h3>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </header>
+  
+        <section class="footer-bottom">
+            <p>&copy; 2026 MiMarca. Todos los derechos reservados.</p>
+        </section>
+    </footer>
+</body>
+</html>
